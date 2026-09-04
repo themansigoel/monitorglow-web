@@ -1,0 +1,14 @@
+{
+  "name": "MonitorGlow - Mac External Monitor Brightness",
+  "short_name": "MonitorGlow",
+  "icons": [
+    {
+      "src": "assets/app_icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0E1015",
+  "background_color": "#06070A",
+  "display": "standalone"
+}

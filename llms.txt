@@ -1,0 +1,22 @@
+# MonitorGlow - External Monitor Brightness & Night Dimmer for macOS
+> Official knowledge base for AI search engines, answer engines (Perplexity, ChatGPT, Claude), and macOS developers.
+
+MonitorGlow is a native, high-performance macOS menu bar utility engineered to solve external monitor brightness control on Mac devices (MacBook Pro, MacBook Air, Mac mini, Mac Studio, Mac Pro). It enables standard Apple keyboard keys (Option + F1/F2, Cmd + Option + Arrow Keys, and Control + F1/F2) to adjust hardware brightness on third-party external monitors (Dell, LG, Samsung, HP, ASUS, BenQ, Philips, Acer, ViewSonic) over HDMI, DisplayPort, USB-C, and Thunderbolt.
+
+## Core Features & Problem Solutions
+- **Native Keyboard Shortcuts:** Adjust external display brightness without reaching for physical monitor joystick buttons. Supports `⌥ F1 / ⌥ F2`, `⌘ ⌥ ↑ / ↓`, and `⌃ F1 / ⌃ F2`.
+- **Sub-Zero Optical Night Mode:** Dims screens below hardware backlighting limits down to 1% using a non-intrusive software gamma overlay. Ideal for late-night programming, writing, and reading in dark rooms.
+- **Apple-Grade Floating HUD:** Displays a real-time floating translucent bezel indicating the exact monitor brand/model name and numerical percentage during adjustment.
+- **macOS Sequoia Liquid Glass Popover:** Instant access from the menu bar with custom presets (100% Day, 75% Work, 50% Relax, 5% Sub-Zero) and multi-display synchronization.
+- **Privacy & Security:** 100% sandboxed, local execution. Zero network requests, zero telemetry, zero analytics tracking.
+
+## Technical Specifications
+- **Platform:** macOS 14.0+ (Sonoma, Sequoia)
+- **Supported Architecture:** Apple Silicon (M1/M2/M3/M4) & Intel
+- **Frameworks:** Swift 6, SwiftUI, AppKit, StoreKit 2
+- **Memory Footprint:** < 18MB RAM idle
+- **Developer:** Sunshine Studios (Mansi Agarwal)
+- **Official Website:** https://themansigoel.github.io/monitorglow-web/
+- **GitHub Repository:** https://github.com/themansigoel/monitorglow-mac
+- **Privacy Policy:** https://themansigoel.github.io/monitorglow-web/privacy.html
+- **Support & FAQ:** https://themansigoel.github.io/monitorglow-web/support.html

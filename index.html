@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="themansigoel@gmail.com">
+    
+    <!-- Title & SEO Meta Tags (ASO & Search Intent Optimized) -->
+    <title>MonitorGlow — Native Mac External Monitor Brightness, Keyboard Shortcuts & Night Dimmer</title>
+    <meta name="description" content="Control Dell, LG, Samsung & external monitors with native Mac keyboard shortcuts. Features Apple-grade floating OSD bezel, Sequoia Liquid Glass popover, and Sub-Zero night dimming below hardware limits.">
+    <link rel="canonical" href="https://themansigoel.github.io/monitorglow-web/">
+    
+    <!-- Multi-Locale Alternate Tags for Global SEO -->
+    <link rel="alternate" hreflang="x-default" href="https://themansigoel.github.io/monitorglow-web/">
+    <link rel="alternate" hreflang="en" href="https://themansigoel.github.io/monitorglow-web/">
+    <link rel="alternate" hreflang="de" href="https://themansigoel.github.io/monitorglow-web/">
+    <link rel="alternate" hreflang="fr" href="https://themansigoel.github.io/monitorglow-web/">
+    <link rel="alternate" hreflang="ja" href="https://themansigoel.github.io/monitorglow-web/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://themansigoel.github.io/monitorglow-web/">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" href="assets/app_icon.png">
+    <link rel="apple-touch-icon" href="assets/app_icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Open Graph / Social Sharing (OG) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://themansigoel.github.io/monitorglow-web/">
+    <meta property="og:title" content="MonitorGlow — External Monitor Brightness & Night Dimmer for Mac">
+    <meta property="og:description" content="Adjust Dell, LG & external monitor brightness directly using Mac keys. Sub-Zero night mode, Apple-grade floating HUD, and zero telemetry.">
+    <meta property="og:image" content="https://themansigoel.github.io/monitorglow-web/assets/01_keyboard_shortcuts.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MonitorGlow — External Monitor Brightness for Mac">
+    <meta name="twitter:description" content="Seamless keyboard brightness control & Sub-Zero night dimming for Dell, LG, Samsung monitors on macOS.">
+    <meta name="twitter:image" content="https://themansigoel.github.io/monitorglow-web/assets/01_keyboard_shortcuts.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Schema.org SoftwareApplication JSON-LD (Rich Snippets & GEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "MonitorGlow",
+      "operatingSystem": "macOS 14.0 or later (Sonoma, Sequoia)",
+      "applicationCategory": "UtilitiesApplication",
+      "softwareVersion": "1.0.0",
+      "offers": {
+        "@type": "Offer",
+        "price": "4.99",
+        "priceCurrency": "USD"
+      },
+      "description": "MonitorGlow is a native macOS menu bar utility that enables Mac keyboard keys to adjust brightness on third-party external monitors (Dell, LG, Samsung, HP) with Sub-Zero night dimming and floating OSD bezels.",
+      "featureList": [
+        "Native Mac Keyboard Shortcuts: Option+F1/F2, Cmd+Opt+Arrow Keys, Ctrl+F1/F2",
+        "Sub-Zero Optical Night Mode: Dim down to 1% below monitor hardware limits",
+        "Apple-Grade Floating OSD Bezel: Real-time HUD showing exact display model branding",
+        "Liquid Glass Menu Bar Popover: Quick presets (100% Day, 75% Work, 50% Relax, 5% Sub-Zero)",
+        "Dual & Multi-Monitor Sync: Seamlessly synchronize multiple desktop screens",
+        "100% Privacy-First: Zero network tracking, zero background CPU drain"
+      ],
+      "screenshot": [
+        "https://themansigoel.github.io/monitorglow-web/assets/01_keyboard_shortcuts.png",
+        "https://themansigoel.github.io/monitorglow-web/assets/02_sub_zero_night_mode.png",
+        "https://themansigoel.github.io/monitorglow-web/assets/03_menubar_liquid_glass.png",
+        "https://themansigoel.github.io/monitorglow-web/assets/04_onscreen_hud_bezel.png",
+        "https://themansigoel.github.io/monitorglow-web/assets/05_lifetime_pro_paywall.png"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Sunshine Studios",
+        "email": "themansigoel@gmail.com",
+        "url": "https://themansigoel.github.io/"
+      }
+    }
+    </script>
+
+    <!-- FAQPage Schema for Google AI Overviews & Rich Results (GEO / AEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I control external monitor brightness with Mac keyboard keys?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MonitorGlow runs in your macOS menu bar and maps Option + F1 / F2, Command + Option + Arrow Keys, or Control + F1 / F2 directly to your connected external monitor over HDMI, DisplayPort, or USB-C."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does MonitorGlow work with Dell, LG, Samsung, and HP displays?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, MonitorGlow supports all standard external monitors connected to MacBook Pro, MacBook Air, Mac mini, Mac Studio, or Mac Pro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can MonitorGlow dim my display below its minimum hardware brightness?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! With Sub-Zero Optical Night Mode, MonitorGlow applies an optical gamma shader directly to the display output, allowing you to dim down to 1% without any screen flicker."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-base: #06070A;
+            --bg-card: rgba(18, 22, 34, 0.7);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.22);
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --sun-amber: #FF9500;
+            --moon-indigo: #818CF8;
+            --glow-gold: rgba(255, 149, 0, 0.22);
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Celestial Glows */
+        .ambient-glow-sun {
+            position: absolute;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-60%);
+            width: 750px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(255, 149, 0, 0.18) 0%, rgba(255, 109, 0, 0.05) 50%, transparent 70%);
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ambient-glow-moon {
+            position: absolute;
+            top: 600px;
+            right: -100px;
+            width: 600px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(129, 140, 248, 0.14) 0%, transparent 65%);
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Nav */
+        header {
+            padding: 28px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .brand img {
+            width: 44px;
+            height: 44px;
+            border-radius: 11px;
+            box-shadow: 0 4px 18px var(--glow-gold);
+        }
+        .brand-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.35rem;
+            letter-spacing: -0.02em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #fff; }
+        .btn-download {
+            background: linear-gradient(135deg, #FF9500, #FF6D00);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(255, 149, 0, 0.35);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-download:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 22px rgba(255, 149, 0, 0.5);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 72px 0 56px;
+        }
+        .pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #FFA726;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.6rem;
+            font-weight: 900;
+            line-height: 1.12;
+            letter-spacing: -0.035em;
+            margin-bottom: 22px;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(180deg, #FFFFFF 60%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 720px;
+            margin: 0 auto 36px;
+            font-weight: 400;
+        }
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        .cta-primary {
+            background: linear-gradient(135deg, #FF9500 0%, #FF6D00 100%);
+            color: #000;
+            padding: 16px 36px;
+            border-radius: 14px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(255, 149, 0, 0.4);
+            transition: all 0.25s var(--ease-out);
+        }
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 38px rgba(255, 149, 0, 0.6);
+        }
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            padding: 16px 28px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            border: 1px solid var(--border-glass);
+            transition: all 0.2s;
+        }
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--border-hover);
+        }
+
+        /* Hero Showcase Visual */
+        .showcase-visual {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 149, 0, 0.15);
+            margin-bottom: 80px;
+        }
+        .showcase-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Bento Grid Features */
+        .bento-section {
+            padding: 60px 0 90px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 54px;
+        }
+        .section-header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 12px;
+        }
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .bento-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 32px;
+            backdrop-filter: blur(24px);
+            transition: transform 0.25s var(--ease-out), border-color 0.25s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-hover);
+        }
+        .bento-card.span-2 {
+            grid-column: span 2;
+        }
+        .bento-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+        .icon-amber { background: rgba(255, 149, 0, 0.15); color: #FF9500; }
+        .icon-indigo { background: rgba(129, 140, 248, 0.15); color: #818CF8; }
+        .icon-cyan { background: rgba(56, 189, 248, 0.15); color: #38BDF8; }
+        .icon-gold { background: rgba(250, 204, 21, 0.15); color: #FACC15; }
+
+        .bento-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .bento-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+        .bento-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 20px;
+            border: 1px solid var(--border-glass);
+        }
+
+        /* SEO Guides / Problem Solution Links */
+        .seo-guides-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 48px;
+            margin-bottom: 80px;
+        }
+        .seo-guides-section h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 24px;
+        }
+        .guide-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+        .guide-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+        .guide-card h4 {
+            color: #FF9500;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .guide-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-glass);
+            padding: 48px 0 60px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: #fff; }
+
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.6rem; }
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-card.span-2 { grid-column: span 1; }
+            .guides-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow-sun"></div>
+    <div class="ambient-glow-moon"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="index.html" class="brand">
+                <img src="assets/app_icon.png" alt="MonitorGlow Icon">
+                <span class="brand-text">MonitorGlow</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#shortcuts">Shortcuts</a>
+                <a href="support.html">Support</a>
+                <a href="https://github.com/themansigoel/monitorglow-mac" target="_blank" rel="noopener">GitHub</a>
+                <a href="#download" class="btn-download">Get on Mac App Store</a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="pill-badge">⚡ Native macOS Sequoia & Sonoma Utility</div>
+            <h1>Control External Monitor Brightness with Mac Keys</h1>
+            <p>Seamlessly adjust Dell, LG, Samsung & third-party monitors using standard keyboard shortcuts. Includes Sub-Zero optical night dimming down to 1%.</p>
+            <div class="hero-actions">
+                <a href="#download" class="cta-primary">Download MonitorGlow</a>
+                <a href="#features" class="cta-secondary">Explore Features ↓</a>
+            </div>
+            
+            <div class="showcase-visual">
+                <img src="assets/01_keyboard_shortcuts.png" alt="MonitorGlow Keyboard Brightness HUD on Mac">
+            </div>
+        </section>
+
+        <!-- Bento Grid Section -->
+        <section id="features" class="bento-section">
+            <div class="section-header">
+                <h2>Engineered for Multi-Monitor Power Users</h2>
+                <p>Zero reaching behind panels. Zero physical buttons. Just pure, effortless brightness control.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Bento Card 1: Shortcuts -->
+                <div class="bento-card">
+                    <div>
+                        <div class="bento-icon icon-amber">⌨️</div>
+                        <h3>Native Mac Keys</h3>
+                        <p>Adjust screen levels using <code>⌥ F1/F2</code>, <code>⌘ ⌥ ↑/↓</code>, or <code>Ctrl+F1/F2</code>. Works over HDMI, DisplayPort, USB-C, and Thunderbolt docks.</p>
+                    </div>
+                </div>
+
+                <!-- Bento Card 2: Sub-Zero Mode (Span 2) -->
+                <div class="bento-card span-2">
+                    <div>
+                        <div class="bento-icon icon-indigo">🌙</div>
+                        <h3>Sub-Zero Optical Night Mode</h3>
+                        <p>Most displays bottom out at 30 nits, which blinds your eyes at 1:00 AM. MonitorGlow applies an optical gamma shade to dim down to 1% without hardware PWM flicker.</p>
+                        <img src="assets/02_sub_zero_night_mode.png" alt="Sub-Zero Night Mode Visual">
+                    </div>
+                </div>
+
+                <!-- Bento Card 3: Liquid Glass (Span 2) -->
+                <div class="bento-card span-2">
+                    <div>
+                        <div class="bento-icon icon-cyan">🎛️</div>
+                        <h3>Liquid Glass Popover & Presets</h3>
+                        <p>Instant menu bar access with dynamic Sequoia glass styling. Switch between 100% Day, 75% Work, 50% Relax, and 5% Sub-Zero presets with one click.</p>
+                        <img src="assets/03_menubar_liquid_glass.png" alt="Menu Bar Popover Visual">
+                    </div>
+                </div>
+
+                <!-- Bento Card 4: Hardware HUD -->
+                <div class="bento-card">
+                    <div>
+                        <div class="bento-icon icon-amber">🖥️</div>
+                        <h3>Apple-Grade Floating HUD</h3>
+                        <p>Visual feedback that feels native to macOS. Floating bezel displays your exact monitor brand and model name (Dell, LG UltraGear, Samsung).</p>
+                    </div>
+                </div>
+
+                <!-- Bento Card 5: Lifetime Pro (Span 3) -->
+                <div class="bento-card" style="grid-column: span 3;">
+                    <div>
+                        <div class="bento-icon icon-gold">👑</div>
+                        <h3>Lifetime Pro License — Zero Subscription Fatigue</h3>
+                        <p>Pay once, enjoy forever across all your personal Macs with Family Sharing support included.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Problem-Solution Section (High Search Volume Landing Guides) -->
+        <section class="seo-guides-section">
+            <h3>Popular Guides & Hardware Solutions</h3>
+            <p style="color: var(--text-secondary);">Step-by-step troubleshooting for Mac mini, Mac Studio, and MacBook external displays:</p>
+            <div class="guides-grid">
+                <a href="dell-monitor-brightness-mac.html" class="guide-card">
+                    <h4>How to Control Dell Monitor Brightness on Mac →</h4>
+                    <p>Fix Apple brightness keys not working on Dell UltraSharp monitors over HDMI & USB-C.</p>
+                </a>
+                <a href="sub-zero-night-dimmer-mac.html" class="guide-card">
+                    <h4>Dim Mac External Displays Below Hardware Limit →</h4>
+                    <p>Learn how Sub-Zero optical dimming eliminates late-night glare and eye strain.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div>
+                    <strong>MonitorGlow</strong> by <a href="https://themansigoel.github.io/" style="color: #fff; text-decoration: none;">Sunshine Studios</a>
+                    <p style="margin-top: 4px;">© 2026 Mansi Agarwal. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="support.html">Customer Support</a>
+                    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use</a>
+                    <a href="https://github.com/themansigoel/monitorglow-mac" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
