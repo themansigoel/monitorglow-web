@@ -13,17 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0B0D13;
-            --card-bg: rgba(22, 26, 38, 0.7);
-            --border: rgba(255, 255, 255, 0.08);
-            --text-primary: #F8FAFC;
-            --text-secondary: #94A3B8;
-            --accent: #FF9500;
+            --bg: #F5F5F7;
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --border: rgba(0, 0, 0, 0.08);
+            --text-primary: #1D1D1F;
+            --text-secondary: #515154;
+            --accent: #0071E3;
         }
         body {
             background-color: var(--bg);
             color: var(--text-primary);
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', sans-serif;
             margin: 0;
             padding: 40px 20px;
             line-height: 1.7;
@@ -35,7 +35,9 @@
             border: 1px solid var(--border);
             border-radius: 24px;
             padding: 48px;
-            backdrop-filter: blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            box-shadow: 0 16px 44px rgba(0, 0, 0, 0.06);
         }
         .header {
             display: flex;
@@ -49,11 +51,12 @@
             width: 56px;
             height: 56px;
             border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         }
         h1, h2 {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
         }
-        h1 { font-size: 2rem; margin: 0; }
+        h1 { font-size: 2rem; margin: 0; color: var(--text-primary); }
         h2 { font-size: 1.3rem; margin-top: 32px; color: var(--accent); }
         p, li { color: var(--text-secondary); font-size: 1rem; }
         ul { padding-left: 24px; }

@@ -117,16 +117,19 @@
 
     <style>
         :root {
-            --bg-base: #06070A;
-            --bg-card: rgba(18, 22, 34, 0.7);
-            --border-glass: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(255, 255, 255, 0.22);
-            --text-primary: #F8FAFC;
-            --text-secondary: #94A3B8;
-            --text-muted: #64748B;
-            --sun-amber: #FF9500;
-            --moon-indigo: #818CF8;
-            --glow-gold: rgba(255, 149, 0, 0.22);
+            --bg-base: #F5F5F7;
+            --bg-card: rgba(255, 255, 255, 0.82);
+            --border-glass: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(0, 113, 227, 0.35);
+            --text-primary: #1D1D1F;
+            --text-secondary: #515154;
+            --text-muted: #86868B;
+            --apple-blue: #0071E3;
+            --apple-blue-hover: #0077ED;
+            --apple-indigo: #5856D6;
+            --apple-cyan: #0077ED;
+            --apple-purple: #AF52DE;
+            --glow-blue: rgba(0, 113, 227, 0.12);
             --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -134,20 +137,20 @@
         body {
             background-color: var(--bg-base);
             color: var(--text-primary);
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
             line-height: 1.6;
         }
 
-        /* Ambient Celestial Glows */
+        /* Ambient Apple Glows */
         .ambient-glow-sun {
             position: absolute;
-            top: -120px;
+            top: -140px;
             left: 50%;
-            transform: translateX(-60%);
-            width: 750px;
+            transform: translateX(-50%);
+            width: 850px;
             height: 480px;
-            background: radial-gradient(circle, rgba(255, 149, 0, 0.18) 0%, rgba(255, 109, 0, 0.05) 50%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 113, 227, 0.08) 0%, rgba(88, 86, 214, 0.04) 50%, transparent 70%);
             filter: blur(80px);
             pointer-events: none;
             z-index: 0;
@@ -155,11 +158,11 @@
 
         .ambient-glow-moon {
             position: absolute;
-            top: 600px;
-            right: -100px;
-            width: 600px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(129, 140, 248, 0.14) 0%, transparent 65%);
+            top: 620px;
+            right: -80px;
+            width: 650px;
+            height: 520px;
+            background: radial-gradient(circle, rgba(50, 173, 230, 0.06) 0%, transparent 65%);
             filter: blur(90px);
             pointer-events: none;
             z-index: 0;
@@ -185,19 +188,20 @@
             align-items: center;
             gap: 14px;
             text-decoration: none;
-            color: #fff;
+            color: var(--text-primary);
         }
         .brand img {
             width: 44px;
             height: 44px;
             border-radius: 11px;
-            box-shadow: 0 4px 18px var(--glow-gold);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         }
         .brand-text {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
             font-weight: 800;
             font-size: 1.35rem;
             letter-spacing: -0.02em;
+            color: var(--text-primary);
         }
         .nav-links {
             display: flex;
@@ -211,21 +215,22 @@
             font-weight: 500;
             transition: color 0.2s;
         }
-        .nav-links a:hover { color: #fff; }
+        .nav-links a:hover { color: var(--apple-blue); }
         .btn-download {
-            background: linear-gradient(135deg, #FF9500, #FF6D00);
+            background: var(--apple-blue);
             color: #fff;
             padding: 10px 22px;
             border-radius: 999px;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 0.9rem;
             text-decoration: none;
-            box-shadow: 0 4px 16px rgba(255, 149, 0, 0.35);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(0, 113, 227, 0.25);
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
         }
         .btn-download:hover {
+            background: var(--apple-blue-hover);
             transform: translateY(-1px);
-            box-shadow: 0 6px 22px rgba(255, 149, 0, 0.5);
+            box-shadow: 0 6px 20px rgba(0, 113, 227, 0.38);
         }
 
         /* Hero */
@@ -239,17 +244,17 @@
             gap: 8px;
             padding: 7px 18px;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(0, 113, 227, 0.08);
+            border: 1px solid rgba(0, 113, 227, 0.2);
             font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 0.04em;
-            color: #FFA726;
+            color: var(--apple-blue);
             margin-bottom: 24px;
             text-transform: uppercase;
         }
         .hero h1 {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 3.6rem;
             font-weight: 900;
             line-height: 1.12;
@@ -258,9 +263,7 @@
             max-width: 960px;
             margin-left: auto;
             margin-right: auto;
-            background: linear-gradient(180deg, #FFFFFF 60%, #94A3B8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-primary);
         }
         .hero p {
             font-size: 1.25rem;
@@ -276,34 +279,36 @@
             margin-bottom: 48px;
         }
         .cta-primary {
-            background: linear-gradient(135deg, #FF9500 0%, #FF6D00 100%);
-            color: #000;
+            background: var(--apple-blue);
+            color: #FFFFFF;
             padding: 16px 36px;
             border-radius: 14px;
-            font-weight: 800;
+            font-weight: 700;
             font-size: 1.05rem;
             text-decoration: none;
-            box-shadow: 0 8px 30px rgba(255, 149, 0, 0.4);
+            box-shadow: 0 6px 22px rgba(0, 113, 227, 0.3);
             transition: all 0.25s var(--ease-out);
         }
         .cta-primary:hover {
+            background: var(--apple-blue-hover);
             transform: translateY(-2px);
-            box-shadow: 0 12px 38px rgba(255, 149, 0, 0.6);
+            box-shadow: 0 10px 28px rgba(0, 113, 227, 0.42);
         }
         .cta-secondary {
-            background: rgba(255, 255, 255, 0.06);
-            color: #fff;
+            background: #FFFFFF;
+            color: var(--text-primary);
             padding: 16px 28px;
             border-radius: 14px;
             font-weight: 600;
             font-size: 1.05rem;
             text-decoration: none;
-            border: 1px solid var(--border-glass);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
             transition: all 0.2s;
         }
         .cta-secondary:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: var(--border-hover);
+            background: #F5F5F7;
+            border-color: rgba(0, 0, 0, 0.18);
         }
 
         /* Hero Showcase Visual */
@@ -312,7 +317,8 @@
             border-radius: 24px;
             overflow: hidden;
             border: 1px solid var(--border-glass);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 149, 0, 0.15);
+            background: #FFFFFF;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.07), 0 0 30px rgba(0, 113, 227, 0.05);
             margin-bottom: 80px;
         }
         .showcase-visual img {
@@ -330,11 +336,12 @@
             margin-bottom: 54px;
         }
         .section-header h2 {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 2.5rem;
             font-weight: 800;
             letter-spacing: -0.025em;
             margin-bottom: 12px;
+            color: var(--text-primary);
         }
         .section-header p {
             color: var(--text-secondary);
@@ -353,8 +360,10 @@
             border: 1px solid var(--border-glass);
             border-radius: 20px;
             padding: 32px;
-            backdrop-filter: blur(24px);
-            transition: transform 0.25s var(--ease-out), border-color 0.25s;
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: transform 0.25s var(--ease-out), border-color 0.25s, box-shadow 0.25s;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -362,6 +371,7 @@
         .bento-card:hover {
             transform: translateY(-4px);
             border-color: var(--border-hover);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
         }
         .bento-card.span-2 {
             grid-column: span 2;
@@ -376,42 +386,52 @@
             font-size: 1.4rem;
             margin-bottom: 20px;
         }
-        .icon-amber { background: rgba(255, 149, 0, 0.15); color: #FF9500; }
-        .icon-indigo { background: rgba(129, 140, 248, 0.15); color: #818CF8; }
-        .icon-cyan { background: rgba(56, 189, 248, 0.15); color: #38BDF8; }
-        .icon-gold { background: rgba(250, 204, 21, 0.15); color: #FACC15; }
+        .icon-blue { background: rgba(0, 113, 227, 0.1); color: var(--apple-blue); }
+        .icon-indigo { background: rgba(88, 86, 214, 0.1); color: var(--apple-indigo); }
+        .icon-cyan { background: rgba(50, 173, 230, 0.12); color: #0077ED; }
+        .icon-purple { background: rgba(175, 82, 222, 0.1); color: var(--apple-purple); }
 
         .bento-card h3 {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 1.35rem;
             margin-bottom: 10px;
-            color: #fff;
+            color: var(--text-primary);
         }
         .bento-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.55;
         }
+        .bento-card code {
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--text-primary);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
         .bento-card img {
             width: 100%;
             border-radius: 12px;
             margin-top: 20px;
             border: 1px solid var(--border-glass);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
         }
 
         /* SEO Guides / Problem Solution Links */
         .seo-guides-section {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.75);
             border: 1px solid var(--border-glass);
             border-radius: 24px;
             padding: 48px;
             margin-bottom: 80px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
         }
         .seo-guides-section h3 {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 1.6rem;
             margin-bottom: 12px;
-            color: #fff;
+            color: var(--text-primary);
         }
         .guides-grid {
             display: grid;
@@ -420,21 +440,22 @@
             margin-top: 24px;
         }
         .guide-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: #FFFFFF;
             border: 1px solid var(--border-glass);
             border-radius: 16px;
             padding: 24px;
             text-decoration: none;
             color: inherit;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
             transition: all 0.2s;
         }
         .guide-card:hover {
-            background: rgba(255, 255, 255, 0.06);
             border-color: var(--border-hover);
             transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
         }
         .guide-card h4 {
-            color: #FF9500;
+            color: var(--apple-blue);
             font-size: 1.1rem;
             margin-bottom: 6px;
         }
@@ -457,6 +478,7 @@
             flex-wrap: wrap;
             gap: 20px;
         }
+        footer strong { color: var(--text-primary); }
         .footer-links {
             display: flex;
             gap: 24px;
@@ -466,7 +488,7 @@
             text-decoration: none;
             transition: color 0.2s;
         }
-        .footer-links a:hover { color: #fff; }
+        .footer-links a:hover { color: var(--apple-blue); }
 
         @media (max-width: 900px) {
             .hero h1 { font-size: 2.6rem; }
@@ -523,7 +545,7 @@
                 <!-- Bento Card 1: Shortcuts -->
                 <div class="bento-card">
                     <div>
-                        <div class="bento-icon icon-amber">⌨️</div>
+                        <div class="bento-icon icon-blue">⌨️</div>
                         <h3>Native Mac Keys</h3>
                         <p>Adjust screen levels using <code>⌥ F1/F2</code>, <code>⌘ ⌥ ↑/↓</code>, or <code>Ctrl+F1/F2</code>. Works over HDMI, DisplayPort, USB-C, and Thunderbolt docks.</p>
                     </div>
@@ -552,7 +574,7 @@
                 <!-- Bento Card 4: Hardware HUD -->
                 <div class="bento-card">
                     <div>
-                        <div class="bento-icon icon-amber">🖥️</div>
+                        <div class="bento-icon icon-blue">🖥️</div>
                         <h3>Apple-Grade Floating HUD</h3>
                         <p>Visual feedback that feels native to macOS. Floating bezel displays your external monitor name with silky 120Hz smooth animations.</p>
                         <img src="assets/04_onscreen_hud_bezel.png" alt="Floating HUD Visual">
@@ -562,7 +584,7 @@
                 <!-- Bento Card 5: Lifetime Pro (Span 3) -->
                 <div class="bento-card" style="grid-column: span 3;">
                     <div>
-                        <div class="bento-icon icon-gold">👑</div>
+                        <div class="bento-icon icon-purple">👑</div>
                         <h3>Lifetime Pro License — Zero Subscription Fatigue</h3>
                         <p>Pay once, enjoy forever across all your personal Macs with Apple Family Sharing support included. No recurring monthly fees.</p>
                         <img src="assets/05_lifetime_pro_paywall.png" alt="Lifetime Pro License Visual" style="max-height: 480px; object-fit: cover; object-position: top;">
