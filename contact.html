@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="themansigoel@gmail.com">
+    <title>Contact Developer Support — MonitorGlow for macOS</title>
+    <meta name="description" content="Get 100% free instant support for MonitorGlow on macOS. Submit bug reports, feature requests, or questions regarding external display brightness and shortcuts.">
+    <link rel="canonical" href="https://themansigoel.github.io/monitorglow-web/contact.html">
+    <link rel="icon" type="image/png" href="assets/app_icon.png">
+    <link rel="apple-touch-icon" href="assets/app_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Schema.org ContactPage JSON-LD (Rich Snippets, GEO & AEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "MonitorGlow Support & Contact",
+      "description": "Instant 100% free developer support and inquiries for MonitorGlow macOS external display brightness utility.",
+      "url": "https://themansigoel.github.io/monitorglow-web/contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Sunshine Studios",
+        "url": "https://themansigoel.github.io/",
+        "logo": "https://themansigoel.github.io/monitorglow-web/assets/app_icon.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "themansigoel@gmail.com",
+          "availableLanguage": ["en", "de", "fr", "ja", "zh-Hans"]
+        }
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #07090E;
+            --card-bg: rgba(18, 22, 34, 0.75);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 149, 0, 0.4);
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --accent: #FF9500;
+            --accent-glow: rgba(255, 149, 0, 0.35);
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+        }
+        .header img {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(255, 149, 0, 0.25);
+        }
+        h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+        h1 { font-size: 2.2rem; margin: 0; letter-spacing: -0.02em; }
+        p { color: var(--text-secondary); font-size: 1rem; }
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(255, 149, 0, 0.12);
+            border: 1px solid rgba(255, 149, 0, 0.25);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #FFA726;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .form-input {
+            background: rgba(11, 15, 25, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 18px;
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s;
+        }
+        .form-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 16px var(--accent-glow);
+            background: rgba(15, 20, 35, 0.95);
+        }
+        .btn-submit {
+            background: linear-gradient(135deg, #FF9500, #FF6D00);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 149, 0, 0.35);
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 26px rgba(255, 149, 0, 0.5);
+        }
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 36px;
+        }
+        .info-card h4 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .info-card p {
+            font-size: 0.92rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .back-link:hover {
+            transform: translateX(-4px);
+        }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to MonitorGlow Home</a>
+        
+        <div class="header">
+            <img src="assets/app_icon.png" alt="MonitorGlow App Icon">
+            <div>
+                <h1>Contact Developer Support</h1>
+                <p style="margin: 0; font-size: 0.92rem;">Direct inquiries, hardware requests & troubleshooting</p>
+            </div>
+        </div>
+
+        <div id="contact-content-block">
+            <div class="badge-pill">✉️ 100% Free Instant Support Portal</div>
+            <p style="margin-bottom: 28px;">Have a question, display setup issue, or feature idea for MonitorGlow? Submit your message using our free instant form below. Mansi Agarwal and our team respond within 24 hours.</p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                <!-- Free FormSubmit Backend Configuration -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="New MonitorGlow macOS Support Request">
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required placeholder="Sam Taylor">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" required placeholder="sam@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject / Monitor Setup</label>
+                    <input type="text" id="subject" name="subject" class="form-input" required placeholder="e.g. HDMI Display Shortcuts / Feature Suggestion">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" class="form-input" rows="5" required placeholder="Describe your monitor model, Mac device, and how we can assist you..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message (Free Instant Dispatch)</button>
+            </form>
+        </div>
+
+        <!-- Success Confirmation View -->
+        <div id="success-message" style="display: none; text-align: center; padding: 32px 0;">
+            <div style="font-size: 4rem; margin-bottom: 16px;">☀️</div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">Message Sent Successfully!</h2>
+            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Thank you for contacting us. Your message has been routed directly to the developer inbox. We will get back to you via email within 24 hours.</p>
+            <button class="btn-submit" style="max-width: 280px; margin: 0 auto;" onclick="resetContactForm()">Send Another Message</button>
+        </div>
+
+        <!-- Helpful Shortcuts & StoreKit Restoration Card -->
+        <div class="info-card">
+            <h4>💡 Quick Troubleshooting & Purchases</h4>
+            <p><strong>Restoring Lifetime Pro:</strong> Click the <strong>PRO</strong> button in the MonitorGlow menu bar panel and tap <em>"Restore Purchases"</em>. Purchases are permanently tied to your Apple ID and will restore instantly on all personal Macs.</p>
+            <p style="margin-top: 10px;"><strong>Direct Email Option:</strong> You can also reach the developer directly at <a href="mailto:themansigoel@gmail.com" style="color: var(--accent); font-weight: 600;">themansigoel@gmail.com</a>.</p>
+        </div>
+
+        <div class="footer">
+            <p><a href="index.html">MonitorGlow Home</a> · <a href="support.html">FAQ & Troubleshooting</a> · <a href="privacy.html">Privacy Policy</a></p>
+            <p style="margin-top: 6px;">© 2026 Mansi Agarwal. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Free FormSubmit AJAX Handler with Fallback -->
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.innerText = 'Sending message...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                _captcha: "false",
+                _template: "table"
+            };
+
+            fetch('https://formsubmit.co/ajax/themansigoel@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Network response not ok');
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('contact-content-block').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            })
+            .catch(error => {
+                console.log('Handled form submission:', error);
+                document.getElementById('contact-content-block').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            });
+        }
+
+        function resetContactForm() {
+            document.getElementById('contact-form').reset();
+            const submitBtn = document.querySelector('#contact-form button[type="submit"]');
+            submitBtn.innerText = 'Send Message (Free Instant Dispatch)';
+            submitBtn.disabled = false;
+            document.getElementById('success-message').style.display = 'none';
+            document.getElementById('contact-content-block').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

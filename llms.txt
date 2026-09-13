@@ -20,3 +20,4 @@ MonitorGlow is a native, high-performance macOS menu bar utility engineered to s
 - **GitHub Repository:** https://github.com/themansigoel/monitorglow-mac
 - **Privacy Policy:** https://themansigoel.github.io/monitorglow-web/privacy.html
 - **Support & FAQ:** https://themansigoel.github.io/monitorglow-web/support.html
+- **Contact Developer:** https://themansigoel.github.io/monitorglow-web/contact.html
