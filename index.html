@@ -7,8 +7,9 @@
     <meta name="p:domain_verify" content="b6d16b6ae4ff59e33f4691bc04bf511b">
     
     <!-- Title & SEO Meta Tags (ASO & Search Intent Optimized) -->
-    <title>MonitorGlow — Native Mac External Monitor Brightness, Keyboard Shortcuts & Night Dimmer</title>
-    <meta name="description" content="Dim external displays in software with Mac keyboard shortcuts, quick presets, a floating brightness HUD, and Sub-Zero night mode. Three-day trial and Lifetime Pro.">
+    <title>Brightness - MonitorGlow — Native Mac External Monitor Brightness, Keyboard Shortcuts & Night Dimmer</title>
+    <meta name="description" content="Dim external displays with native Mac keyboard shortcuts (⌘⌥↑↓), Sub-Zero night mode down to 1%, and a floating HUD over HDMI, DisplayPort & USB-C. Download on the Mac App Store.">
+    <meta name="keywords" content="external monitor brightness mac, mac brightness keys hdmi, dell monitor brightness mac, mac external display keyboard shortcuts, sub-zero night dimmer mac, screen dimmer mac, macos sequoia monitor brightness, usb-c monitor brightness mac">
     <link rel="canonical" href="https://themansigoel.github.io/monitorglow-web/">
     
     <!-- Multi-Locale Alternate Tags for Global SEO -->
@@ -27,14 +28,14 @@
     <!-- Open Graph / Social Sharing (OG) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://themansigoel.github.io/monitorglow-web/">
-    <meta property="og:title" content="MonitorGlow — External Monitor Brightness & Night Dimmer for Mac">
-    <meta property="og:description" content="Dim external displays with Mac keys, quick presets, and Sub-Zero night mode. Uses automatic Firebase usage analytics.">
+    <meta property="og:title" content="Brightness - MonitorGlow — External Monitor Brightness & Night Dimmer for Mac">
+    <meta property="og:description" content="Control external monitor brightness directly with Mac keyboard shortcuts (⌘⌥↑↓), Sub-Zero night dimming down to 1%, and floating HUD. Available on the Mac App Store.">
     <meta property="og:image" content="https://themansigoel.github.io/monitorglow-web/assets/benefit_01_never_touch_buttons.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MonitorGlow — External Monitor Brightness for Mac">
-    <meta name="twitter:description" content="Seamless keyboard brightness control & Sub-Zero night dimming for external monitors on macOS.">
+    <meta name="twitter:title" content="Brightness - MonitorGlow — External Monitor Brightness for Mac">
+    <meta name="twitter:description" content="Seamless keyboard brightness control (⌘⌥↑↓) & Sub-Zero night dimming for external monitors on macOS. Download on Mac App Store.">
     <meta name="twitter:image" content="https://themansigoel.github.io/monitorglow-web/assets/benefit_01_never_touch_buttons.png">
 
     <!-- Fonts -->
@@ -47,18 +48,26 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "MonitorGlow",
+      "name": "Brightness - MonitorGlow",
       "operatingSystem": "macOS 14.0 or later (Sonoma, Sequoia)",
       "applicationCategory": "UtilitiesApplication",
       "softwareVersion": "1.0.0",
-      "description": "MonitorGlow is a macOS menu bar utility for software dimming of external displays using keyboard shortcuts, Sub-Zero night mode, and a floating brightness HUD. Full controls are available during a three-day trial and with Lifetime Pro afterward.",
+      "downloadUrl": "https://apps.apple.com/us/app/brightness-monitorglow/id6808904482",
+      "installUrl": "https://apps.apple.com/us/app/brightness-monitorglow/id6808904482",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free download with full 3-day trial and optional one-time Lifetime Pro purchase"
+      },
+      "description": "MonitorGlow is a native macOS menu bar utility for external display brightness control using Mac keyboard shortcuts (⌘⌥↑↓), Sub-Zero night dimming down to 1%, and a floating Apple-grade HUD. Full controls are available during a 3-day trial and with Lifetime Pro.",
       "featureList": [
-        "Native Mac Keyboard Shortcuts: Option+F1/F2, Cmd+Opt+Arrow Keys, Ctrl+F1/F2",
-        "Sub-Zero Night Mode: Software dimming to a 1% UI level",
+        "Native Mac Keyboard Shortcuts: ⌘⌥↑ (Brighten) & ⌘⌥↓ (Dim), Option+F1/F2, Ctrl+F1/F2",
+        "Sub-Zero Night Mode: Software dimming to 1% below monitor hardware limits",
         "Floating OSD Bezel: Real-time HUD showing display name and brightness level",
         "Liquid Glass Menu Bar Popover: Quick presets (100% Day, 75% Work, 50% Relax, 5% Sub-Zero)",
         "Dual & Multi-Monitor Sync: Seamlessly synchronize multiple desktop screens",
-        "Firebase usage analytics for product improvement"
+        "Lifetime Pro License: One-time purchase, zero subscriptions, Family Sharing supported"
       ],
       "screenshot": [
         "https://themansigoel.github.io/monitorglow-web/assets/benefit_01_never_touch_buttons.png",
@@ -270,8 +279,59 @@
         .hero-actions {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 16px;
-            margin-bottom: 48px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .cta-appstore {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: #000000;
+            color: #FFFFFF;
+            padding: 12px 28px;
+            border-radius: 14px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            transition: all 0.25s var(--ease-out);
+        }
+        .cta-appstore:hover {
+            background: #1D1D1F;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+        }
+        .cta-appstore svg {
+            width: 28px;
+            height: 28px;
+            fill: #FFFFFF;
+            flex-shrink: 0;
+        }
+        .cta-appstore-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            line-height: 1.15;
+        }
+        .cta-appstore-sub {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 500;
+        }
+        .cta-appstore-title {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #FFFFFF;
+        }
+        .hero-trial-note {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 44px;
+            font-weight: 500;
         }
         .cta-primary {
             background: var(--apple-blue);
@@ -304,6 +364,38 @@
         .cta-secondary:hover {
             background: #F5F5F7;
             border-color: rgba(0, 0, 0, 0.18);
+        }
+
+        /* Bottom Call to Action Banner */
+        .bottom-cta-banner {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 247, 0.85));
+            border: 1px solid var(--border-glass);
+            border-radius: 28px;
+            padding: 60px 32px;
+            text-align: center;
+            margin-bottom: 80px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05), 0 0 30px rgba(0, 113, 227, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+        .bottom-cta-banner h2 {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+        }
+        .bottom-cta-banner p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 620px;
+            margin: 0 auto;
+        }
+        .bottom-cta-subtext {
+            font-size: 0.85rem !important;
+            color: var(--text-muted) !important;
+            margin-top: 18px !important;
         }
 
         /* Hero Showcase Visual */
@@ -510,7 +602,7 @@
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact</a>
                 <a href="https://github.com/themansigoel/monitorglow-mac" target="_blank" rel="noopener">GitHub</a>
-                <a href="contact.html" class="btn-download">Ask About Availability</a>
+                <a href="https://apps.apple.com/us/app/brightness-monitorglow/id6808904482" class="btn-download" target="_blank" rel="noopener">Get on Mac App Store </a>
             </div>
         </header>
 
@@ -518,11 +610,20 @@
         <section class="hero">
             <div class="pill-badge">⚡ Native macOS Sequoia & Sonoma Utility</div>
             <h1>Control External Monitor Brightness with Mac Keys</h1>
-            <p>Dim external displays in software with Mac keyboard shortcuts. Try all controls for three days, then keep them with one Lifetime Pro purchase.</p>
+            <p>Dim Dell, LG, Samsung, and third-party displays in software with native Mac shortcuts (<code>⌘⌥ ↑</code> / <code>⌘⌥ ↓</code>). Enjoy Sub-Zero night dimming down to 1% and a real-time floating Apple HUD.</p>
             <div class="hero-actions">
-                <a href="contact.html" class="cta-primary">Ask About Launch</a>
+                <a href="https://apps.apple.com/us/app/brightness-monitorglow/id6808904482" class="cta-appstore" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 170 170" fill="currentColor">
+                        <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.58-7.78-11.65-14.23-6.42-10.13-11.43-21.43-15.02-33.89-3.59-12.46-5.38-23.77-5.38-33.93 0-14.81 3.73-26.68 11.19-35.61 7.46-8.93 16.71-13.49 27.76-13.68 4.9.11 10.33 1.34 16.29 3.69 5.96 2.35 9.9 3.61 11.83 3.78 2.29-.33 6.64-1.74 13.06-4.23 6.42-2.49 12.08-3.61 16.98-3.36 12.98.87 23.32 5.66 31.02 14.37-11.75 7.18-17.51 17.08-17.29 29.69.22 9.8 4.03 17.95 11.43 24.45 7.4 6.5 16.09 10.22 26.08 11.16-2.29 7.08-5.12 14.16-8.5 21.25zM119.22 31.84c0-7.39 2.68-14.38 8.04-20.97 5.36-6.59 12.07-10.58 20.13-11.97.22 1.09.33 2.07.33 2.94 0 7.39-2.78 14.49-8.33 21.3-5.55 6.81-12.46 10.87-20.73 12.18-.11-1.09-.17-1.96-.17-2.61z"/>
+                    </svg>
+                    <div class="cta-appstore-text">
+                        <span class="cta-appstore-sub">Download on the</span>
+                        <span class="cta-appstore-title">Mac App Store</span>
+                    </div>
+                </a>
                 <a href="#features" class="cta-secondary">Explore Features ↓</a>
             </div>
+            <div class="hero-trial-note">✨ Free 3-Day Trial included · One-time Lifetime Pro · Zero Subscription Fatigue</div>
             
             <div class="showcase-visual">
                 <img src="assets/benefit_01_never_touch_buttons.png" alt="MonitorGlow Keyboard Brightness Control — Never Touch Monitor Buttons Again">
@@ -542,7 +643,7 @@
                     <div>
                         <div class="bento-icon icon-blue">⌨️</div>
                         <h3>Native Mac Keys</h3>
-                        <p>Adjust screen levels using <code>⌥ F1/F2</code>, <code>⌘ ⌥ ↑/↓</code>, or <code>Ctrl+F1/F2</code>. Works over HDMI, DisplayPort, USB-C, and Thunderbolt docks.</p>
+                        <p>Adjust screen brightness instantly using <code>⌘ ⌥ ↑</code> (Brighten) & <code>⌘ ⌥ ↓</code> (Dim), or <code>⌥ F1 / F2</code>. Works over HDMI, DisplayPort, USB-C, and Thunderbolt docks.</p>
                     </div>
                 </div>
 
@@ -580,12 +681,30 @@
                 <div class="bento-card" style="grid-column: span 3;">
                     <div>
                         <div class="bento-icon icon-purple">👑</div>
-                        <h3>Lifetime Pro License — Zero Subscription Fatigue</h3>
-                        <p>Pay once, enjoy forever across all your personal Macs with Apple Family Sharing support included. No recurring monthly fees.</p>
+                        <h3>3-Day Free Trial & Lifetime Pro — Zero Subscription Fatigue</h3>
+                        <p>Enjoy full brightness controls for 3 days completely free. Keep forever with a single one-time Lifetime Pro purchase. Apple Family Sharing supported, no recurring monthly fees.</p>
                         <img src="assets/benefit_05_lifetime_pro_license.png" alt="Lifetime Pro License Visual" style="max-height: 480px; object-fit: cover; object-position: top;">
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Bottom Call to Action Banner -->
+        <section class="bottom-cta-banner">
+            <h2>Never Touch Your Monitor Buttons Again</h2>
+            <p>Join Mac mini, MacBook Pro, and Mac Studio creators and engineers controlling external displays effortlessly with native keys.</p>
+            <div style="margin-top: 28px;">
+                <a href="https://apps.apple.com/us/app/brightness-monitorglow/id6808904482" class="cta-appstore" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 170 170" fill="currentColor">
+                        <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.58-7.78-11.65-14.23-6.42-10.13-11.43-21.43-15.02-33.89-3.59-12.46-5.38-23.77-5.38-33.93 0-14.81 3.73-26.68 11.19-35.61 7.46-8.93 16.71-13.49 27.76-13.68 4.9.11 10.33 1.34 16.29 3.69 5.96 2.35 9.9 3.61 11.83 3.78 2.29-.33 6.64-1.74 13.06-4.23 6.42-2.49 12.08-3.61 16.98-3.36 12.98.87 23.32 5.66 31.02 14.37-11.75 7.18-17.51 17.08-17.29 29.69.22 9.8 4.03 17.95 11.43 24.45 7.4 6.5 16.09 10.22 26.08 11.16-2.29 7.08-5.12 14.16-8.5 21.25zM119.22 31.84c0-7.39 2.68-14.38 8.04-20.97 5.36-6.59 12.07-10.58 20.13-11.97.22 1.09.33 2.07.33 2.94 0 7.39-2.78 14.49-8.33 21.3-5.55 6.81-12.46 10.87-20.73 12.18-.11-1.09-.17-1.96-.17-2.61z"/>
+                    </svg>
+                    <div class="cta-appstore-text">
+                        <span class="cta-appstore-sub">Get it now on the</span>
+                        <span class="cta-appstore-title">Mac App Store</span>
+                    </div>
+                </a>
+            </div>
+            <p class="bottom-cta-subtext">Compatible with macOS Sonoma (14.0+) & macOS Sequoia (15.0+) · Apple Silicon M1–M4 & Intel</p>
         </section>
 
         <!-- SEO Problem-Solution Section (High Search Volume Landing Guides) -->
@@ -612,7 +731,7 @@
         <footer>
             <div class="footer-content">
                 <div>
-                    <strong>MonitorGlow</strong> by <a href="https://themansigoel.github.io/" style="color: #fff; text-decoration: none;">Sunshine Studios</a>
+                    <strong>MonitorGlow</strong> by <a href="https://themansigoel.github.io/" style="color: var(--text-primary); font-weight: 600; text-decoration: none;">Sunshine Studios</a>
                     <p style="margin-top: 4px;">© 2026 Mansi Agarwal. All rights reserved.</p>
                 </div>
                 <div class="footer-links">

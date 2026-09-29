@@ -42,16 +42,40 @@
         .header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
             gap: 16px;
             margin-bottom: 32px;
             border-bottom: 1px solid var(--border);
             padding-bottom: 24px;
+        }
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
         }
         .header img {
             width: 56px;
             height: 56px;
             border-radius: 14px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+        .appstore-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1D1D1F;
+            color: #FFFFFF !important;
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .appstore-link:hover {
+            opacity: 0.9;
+            text-decoration: none;
         }
         h1, h2, h3 { font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif; }
         h1 { font-size: 2rem; margin: 0; color: var(--text-primary); }
@@ -81,23 +105,36 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="assets/app_icon.png" alt="MonitorGlow Icon">
-            <div>
-                <h1>Customer Support & FAQ</h1>
-                <p style="margin: 0; font-size: 0.9rem;">Fast help and troubleshooting for MonitorGlow</p>
+            <div class="header-brand">
+                <img src="assets/app_icon.png" alt="MonitorGlow Icon">
+                <div>
+                    <h1>Customer Support & FAQ</h1>
+                    <p style="margin: 0; font-size: 0.9rem;">Fast help and troubleshooting for MonitorGlow</p>
+                </div>
             </div>
+            <a href="https://apps.apple.com/us/app/brightness-monitorglow/id6808904482" class="appstore-link" target="_blank" rel="noopener">Download on App Store </a>
         </div>
 
         <h2>Frequently Asked Questions</h2>
 
         <div class="faq-item">
             <h3>Which keyboard shortcuts control external monitor brightness?</h3>
-            <p>MonitorGlow provides three standard shortcuts out of the box:</p>
+            <p>MonitorGlow provides standard shortcuts out of the box:</p>
             <ul>
+                <li><strong>⌘ ⌥ ↑ / ⌘ ⌥ ↓</strong> (Command + Option + Arrow Up to increase, Arrow Down to decrease)</li>
                 <li><strong>⌥ F1 / ⌥ F2</strong> (Option + F1 to decrease, Option + F2 to increase)</li>
-                <li><strong>⌘ ⌥ ↓ / ⌘ ⌥ ↑</strong> (Command + Option + Arrow Down / Up)</li>
                 <li><strong>⌃ F1 / ⌃ F2</strong> (Control + F1 / F2)</li>
             </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why does MonitorGlow ask for Accessibility permissions?</h3>
+            <p>macOS requires Accessibility permission so MonitorGlow can intercept your global brightness shortcuts (<code>⌘⌥↑ / ⌘⌥↓</code> and <code>⌥F1 / ⌥F2</code>) while you are actively working in other applications. MonitorGlow strictly listens for designated brightness hotkeys and never logs, reads, or transmits your private keystrokes or data.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What is the trial period and pricing model?</h3>
+            <p>MonitorGlow includes a <strong>full 3-day free trial</strong> giving you unrestricted access to all display controls, keyboard shortcuts, and HUD bezels. After the trial, you can unlock <strong>Lifetime Pro</strong> with a single one-time purchase (no subscriptions!) that includes Apple Family Sharing for up to 5 family members.</p>
         </div>
 
         <div class="faq-item">
