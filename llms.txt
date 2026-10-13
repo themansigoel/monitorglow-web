@@ -19,7 +19,7 @@ MonitorGlow is a native, high-performance macOS menu bar utility engineered to s
 - **Frameworks:** Swift 6, SwiftUI, AppKit, StoreKit 2
 - **Memory Footprint:** < 18MB RAM idle
 - **Developer:** Sunshine Studios (Mansi Agarwal)
-- **Mac App Store:** https://apps.apple.com/us/app/brightness-monitorglow/id6808904482
+- **Mac App Store:** https://apps.apple.com/app/brightness-monitorglow/id6808904482
 - **Official Website:** https://themansigoel.github.io/monitorglow-web/
 - **GitHub Repository:** https://github.com/themansigoel/monitorglow-mac
 - **Privacy Policy:** https://themansigoel.github.io/monitorglow-web/privacy.html
